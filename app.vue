@@ -1,12 +1,11 @@
 <template>
   <article>
-    <h1>Let's Translate!</h1>
     <p>SET LANGUAGE:</p>
     <div class="buttons">
-      <button @click="setLocale('en')">en</button>
-      <button @click="setLocale('fr')">fr</button>
-      <button @click="setLocale('es')">es</button>
-      <button @click="setLocale('ko')">ko</button>
+      <button class="setlocale" @click="setLocale('en')">en</button>
+      <button class="setlocale" @click="setLocale('fr')">fr</button>
+      <button class="setlocale" @click="setLocale('es')">es</button>
+      <button class="setlocale" @click="setLocale('ko')">ko</button>
     </div>
     <div class="text">
       <p>{{ $t('welcome') }}</p>
@@ -14,6 +13,10 @@
       <p>{{ $t('ending') }}</p>
     </div>
   </article>
+  <div class="speech-to-text">
+    <button class="microphone-on">🗣️ Speech to Text 🗣️</button>
+    <input>
+  </div>
 </template>
 
 <script>
@@ -36,8 +39,9 @@ body {
   width: 100%;
  }
 
-article {
-  margin-top: 50px;
+article,
+.speech-to-text {
+  margin: 50px 0;
 
   text-align: center;
 
@@ -58,10 +62,20 @@ article {
   background-color: rgb(220, 235, 245);
 }
 
-button {
+.setlocale {
   margin: 5px;
 }
 
+.microphone-on {
+  margin-bottom: 10px;
+  padding: 8px;
+}
 
+input {
+  width: 300px;
+  height: 50px;
+
+  text-align: center;
+}
 
 </style>
