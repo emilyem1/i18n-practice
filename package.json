@@ -1,0 +1,20 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxtjs/i18n": "^8.3.1",
+    "i18next": "^23.12.1",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "i18next-vue": "^4.0.0",
+    "nuxt": "^3.12.3",
+    "vue": "latest"
+  }
+}
